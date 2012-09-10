@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  entity: camshaft.me
+  handle: CamShaft
+  firstName: Cameron
+  lastName: Bytheway
+  avatar: http://www.gravatar.com/avatar/dafd213c94afdd64f9dc4fa92f9710ea?s=64
+
+two:
+  entity: scottwall0.me
+  handle: scottwall0
+  firstName: Scott
+  lastName: Wall
+  avatar: http://www.gravatar.com/avatar/dafd213c94afdd64f9dc4fa92f9510ea?s=64

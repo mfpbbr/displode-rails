@@ -1,0 +1,30 @@
+- model_class = Follower.new.class
+div class="page-header"
+  h1=t '.title', :default => model_class.model_name.human.pluralize
+table class="table table-striped"
+  thead
+    tr
+      th= model_class.human_attribute_name(:id)
+      th= model_class.human_attribute_name(:entity)
+      th= model_class.human_attribute_name(:handle)
+      th= model_class.human_attribute_name(:firstName)
+      th= model_class.human_attribute_name(:lastName)
+      th= model_class.human_attribute_name(:avatar)
+      th= model_class.human_attribute_name(:created_at)
+      th=t '.actions', :default => t("helpers.actions")
+  tbody
+    - @followers.each do |follower|
+      tr
+        td= link_to follower.id, follower_path(follower)
+        td= follower.entity
+        td= follower.handle
+        td= follower.firstName
+        td= follower.lastName
+        td= follower.avatar
+        td=l follower.created_at
+        td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_follower_path(follower), :class => 'btn btn-mini'
+          '
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), follower_path(follower), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_follower_path, :class => 'btn btn-primary'

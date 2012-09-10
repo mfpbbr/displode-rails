@@ -1,0 +1,9 @@
+- content_for :queries do
+  li= link_to "Followers", url_for(:controller => 'followers')
+  li= link_to "Followees", url_for(:controller => 'followees')
+  li= link_to "Posts", url_for(:controller => 'posts')
+  li= link_to "Notifications", url_for(:controller => 'notifications')
+  li= link_to "Profile", url_for(:controller => 'profile')
+  li= link_to "Logout"
+
+= render :template => 'layouts/application'

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  entity: camshaft.me
+  action: posted
+  object: http://camshaft.me/posts/1
+  client: Displode for iPhone
+
+one:
+  entity: scottwall0.me
+  action: liked
+  object: http://camshaft.me/posts/1
+  client: Displode for Android

@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title= content_for?(:title) ? yield(:title) : "Displode"
+    = csrf_meta_tags
+    = stylesheet_link_tag "application", :media => "all"
+
+  body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          a.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand href="#{url_for(:controller => 'home')}" Displode
+          .container.nav-collapse
+            ul.nav
+              = yield :queries
+
+    .container
+      .content
+        = yield
+    
+      footer
+        p
+        | &copy; #{link_to(url_for(:controller => 'home', :only_path => false), :controller => 'home')} 2012
+
+    = javascript_include_tag "application"

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: My First Post
+  latitude: 0
+  longitude: 0
+  scope: public
+
+two:
+  content: My Second Post
+  latitude: 0
+  longitude: 0
+  scope: followers
